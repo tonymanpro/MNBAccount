@@ -1,0 +1,148 @@
+﻿#home_mb_loginform {
+        width: 100%;
+    }
+
+.bodysec {
+    width: 50%;
+}
+
+#container li, #containertwo li, #containerthree li {
+    color: #f59531;
+}
+
+#container span, #containertwo span, #containerthree span {
+    color: #333;
+}
+
+.tituloOtp h1 {
+    color: #000;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 25px;
+    font-weight: normal;
+    font-family: 'Nunito', sans-serif;
+}
+
+#container, #containertwo, #containerthree  {
+    background-color: #F2F2F2;
+    padding: 15px 27px;
+    border-radius: 6px;
+}
+
+#containertwo {
+    position: relative;
+}
+
+#left {
+    clear: both;
+    display: inline-block;
+}
+
+#right {
+    clear: both;
+    display: inline-block;
+    right: 30px;
+    position: absolute;
+}
+
+#lefttwo {
+    clear: both;
+    display: inline-block;
+    width: 46%;
+    background-color: #FFFFFF;
+    border-radius: 6px;        
+    margin-top: 10px;
+}
+
+#righttwo {
+    clear: both;
+    display: inline-block;
+    right: 30px;
+    position: absolute;
+    width: 46%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    bottom: 15px;
+    top: 50px;
+}
+
+.list {
+    margin-bottom: 0;
+    padding-left: 16px;
+}
+
+#pin {
+    margin-top: 10px;
+    width: 203px;
+    margin-bottom: 0px;
+    border: 1px solid #FFFFFF !important;
+}
+#divbtnAceptar {
+    float: right;
+}
+#btnAceptar {
+    background: #F69700 !important;
+    width: 130px;        
+    border-radius: 6px;
+}   
+
+.listbullet {
+list-style: none;
+margin-left: 0;
+}
+
+.listbullet li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+#sublist1 li:before {
+    content: "A.1";
+    padding-right: 5px;
+    display: inline-block;
+}
+#sublist2 li:before {
+    content: "A.2";
+    padding-right: 5px;
+    display: inline-block;
+}
+
+#sublist3 li:before {
+    content: "B.1";
+    padding-right: 5px;
+    display: inline-block;
+}
+
+#sublist4 li:before {
+    content: "B.2";
+    padding-right: 5px;
+    display: inline-block;
+}
+
+/* responsive */
+
+@media screen and (max-width: 565px) {
+    #container {
+        padding-bottom: 40px !important;
+    }
+
+    #right {
+        display: block;
+        width: 100%;
+        text-align: center;
+        right: 0px;
+    }        
+}
+
+@media screen and (max-width: 640px) {
+    #righttwo {
+        display: block;
+        width: 100%;
+        position: static;
+        margin-top: 15px;
+    }
+
+    #lefttwo {
+        width: 100%;
+    }
+}

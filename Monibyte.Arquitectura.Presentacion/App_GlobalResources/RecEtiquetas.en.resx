@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppLogin" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="App_Aceptar" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="App_CambioDeContrasena" xml:space="preserve">
+    <value>Change your password</value>
+  </data>
+  <data name="App_Cancelar" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="App_ContrasenaPorVencer" xml:space="preserve">
+    <value>Password expires in {0} days, &lt;br/&gt; Do you want to change it now?</value>
+  </data>
+  <data name="App_ContrasenaVencida" xml:space="preserve">
+    <value>Your password has expired, please enter your new password.</value>
+  </data>
+  <data name="App_CostaRica" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="App_DerechosReservados" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data>
+  <data name="App_Entrar" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="App_Monibyte" xml:space="preserve">
+    <value>MONIBYTE</value>
+  </data>
+  <data name="App_Nicaragua" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="App_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="App_Olvido" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="App_Panama" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="App_RepDominicana" xml:space="preserve">
+    <value>Dominican Republic</value>
+  </data>
+  <data name="App_ResultadoExitoso" xml:space="preserve">
+    <value>Successful operation</value>
+  </data>
+  <data name="App_SeleccionePais" xml:space="preserve">
+    <value>Select the country (s)</value>
+  </data>
+  <data name="App_SeleccioneUnaPregunta" xml:space="preserve">
+    <value>Select a question</value>
+  </data>
+  <data name="App_SeleccionIdioma" xml:space="preserve">
+    <value>Select language</value>
+  </data>
+  <data name="App_SeleccionPreguntas" xml:space="preserve">
+    <value>Question Section</value>
+  </data>
+  <data name="App_Si" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="App_Siguiente" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="App_TextoPauta1" xml:space="preserve">
+    <value> Customize the use of each cardholder and additional card. Manage credit limits and make group changes to account settings </value>
+  </data>
+  <data name="App_TextoPauta2" xml:space="preserve">
+    <value>We will give you the ability to manage your payment methods effectively and safely, reducing dependency on banks, making your life much easier and generating significant savings</value>
+  </data>
+  <data name="App_TextoPauta3" xml:space="preserve">
+    <value> MONIBYTE was born to provide a technological solution to Lafise Bank. This solution will become a competitive advantage and will revolutionize the industry of Means of Payment in the companies </value>
+  </data>
+  <data name="App_TextoPrincipal" xml:space="preserve">
+    <value> Through our digital platform, we offer solutions tailored to the requirements of your company.  &lt;br/&gt;&lt;br/&gt; You can access this tool from your computer or mobile device and customize 
+           the parameters of your credit cards, set credit limits, terms of use
+           and restrictions for each of your employees</value>
+  </data>
+  <data name="App_UsuarioAliasDePreferencia" xml:space="preserve">
+    <value>User or alias of your choice</value>
+  </data>
+  <data name="App_VerMas" xml:space="preserve">
+    <value>See more...</value>
+  </data>
+  <data name="App_VigenciaMensual" xml:space="preserve">
+    <value>1 month</value>
+  </data>
+  <data name="App_VigenciaSemestral" xml:space="preserve">
+    <value>6 months</value>
+  </data>
+  <data name="App_VigenciaTrimestral" xml:space="preserve">
+    <value>3 months</value>
+  </data>
+  <data name="Ayu_Alias" xml:space="preserve">
+    <value>Minimum length 4 characters</value>
+  </data>
+  <data name="Ayu_AliasUsuario" xml:space="preserve">
+    <value>Enter your username</value>
+  </data>
+  <data name="Ayu_CambioContrasena" xml:space="preserve">
+    <value>&lt;div class="ayuda-formulario"&gt; * Please enter your current password. * Then enter the new password.&lt;br /&gt; *Password must contain at least eight characters. *And minimum two numbers and four letters.&lt;br /&gt; *The maximum is 16 characters.&lt;/div&gt;</value>
+  </data>
+  <data name="Ayu_Confirmar" xml:space="preserve">
+    <value>Confirm your password</value>
+  </data>
+  <data name="Ayu_Contrasena" xml:space="preserve">
+    <value>Enter your password, use numbers and letters preferably.</value>
+  </data>
+  <data name="Ayu_Correo" xml:space="preserve">
+    <value>Correctly enter your registered email</value>
+  </data>
+  <data name="Ayu_CorreoRegistrar" xml:space="preserve">
+    <value>Correctly enter your email preference</value>
+  </data>
+  <data name="Ayu_Idioma" xml:space="preserve">
+    <value>Select your preferred language</value>
+  </data>
+  <data name="Ayu_Pais" xml:space="preserve">
+    <value>Select your country</value>
+  </data>
+  <data name="Ayu_RenuevaContrasena" xml:space="preserve">
+    <value>&lt;div class="ayuda-formulario"&gt; * The password must have at least 8 characters.&lt;br /&gt;* And minimum two numbers and four letters.&lt;br /&gt; * The maximum is 16 characters.&lt;/div&gt;</value>
+  </data>
+  <data name="Mod_AliasUsuario" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Mod_Confirmar" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Mod_Contrasena" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Mod_ContrasenaActual" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="Mod_Correo" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Mod_FormatoFecha" xml:space="preserve">
+    <value>Date Format:</value>
+  </data>
+  <data name="Mod_IdDesmarcableMovLiq" xml:space="preserve">
+    <value>Allows movement selection in expense settlement:</value>
+  </data>
+  <data name="Mod_IdEnviaEstCtaIndividual" xml:space="preserve">
+    <value>Send status of individual account:</value>
+  </data>
+  <data name="Mod_IdIncluyeDebCred" xml:space="preserve">
+    <value>Include debiting and crediting cash flows:</value>
+  </data>
+  <data name="Mod_IdInfDenegaciones" xml:space="preserve">
+    <value>Receive daily notification of refusals:</value>
+  </data>
+  <data name="Mod_IdRequiereAutorizacion" xml:space="preserve">
+    <value>Use joint approval:</value>
+  </data>
+  <data name="Mod_IdValidaEdicionMov" xml:space="preserve">
+    <value>Restricts movements including liquidation expenses:</value>
+  </data>
+  <data name="Mod_NuevaContrasena" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Mod_NumDecimales" xml:space="preserve">
+    <value>Number of decimals:</value>
+  </data>
+  <data name="Mod_OTP" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="Mod_Pais" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Mod_RequieresOTP" xml:space="preserve">
+    <value>Require Token</value>
+  </data>
+  <data name="Mod_Respuesta" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Mod_SepDecimal" xml:space="preserve">
+    <value>Decimal point:</value>
+  </data>
+  <data name="Mod_SepMiles" xml:space="preserve">
+    <value>Thousands separator:</value>
+  </data>
+  <data name="Mod_VigenciaContrasena" xml:space="preserve">
+    <value>Valid through</value>
+  </data>
+  <data name="Navigation_Link0" xml:space="preserve">
+    <value>Beginning</value>
+  </data>
+  <data name="Navigation_Link1" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="Navigation_Link2" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="Navigation_Link3" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value> * Then confirm the new password. &lt;br /&gt; * The password must have at least 8 characters. * And at least 2 numbers and 4 letters. &lt;br /&gt; * The maximum is 16 characters. &lt;/div&gt;</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>   * And at least 2 numbers and 4 letters. &lt;br /&gt; * The maximum is 16 characters. &lt;/div&gt;</value>
+  </data>
+  <data name="Tit_Autenticar" xml:space="preserve">
+    <value>Step 1/3 -Authentication</value>
+  </data>
+  <data name="Tit_BienvenidoMonibyte" xml:space="preserve">
+    <value>Welcome to Monibyte</value>
+  </data>
+  <data name="Tit_InfoPersonal" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="Tit_Ingresar" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Tit_LemaMonibyte" xml:space="preserve">
+    <value>Innovation in electronic payments</value>
+  </data>
+  <data name="Tit_SeleccionEmpresa" xml:space="preserve">
+    <value>Choose a company</value>
+  </data>
+  <data name="Tit_SubTituloBody" xml:space="preserve">
+    <value>Monibyte is security, flexibility, technology and control </value>
+  </data>
+  <data name="Tit_Titulopauta1" xml:space="preserve">
+    <value>A control tool</value>
+  </data>
+  <data name="Tit_Titulopauta2" xml:space="preserve">
+    <value>Our value proposition</value>
+  </data>
+  <data name="Tit_Titulopauta3" xml:space="preserve">
+    <value>Backed by LAFISE</value>
+  </data>
+  <data name="AppLogout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="AppMyAccount" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="App_IngreseCodigoGenerado" xml:space="preserve">
+    <value>Enter the 6-digit code generated:</value>
+  </data>
+  <data name="App_IngreseOTP" xml:space="preserve">
+    <value>Enter OTP</value>
+  </data>
+  <data name="App_ScaneeIngreseCodigo" xml:space="preserve">
+    <value>Scan or enter the following code:</value>
+  </data>
+  <data name="Tit_RespondaPreguntas" xml:space="preserve">
+    <value>Step 2/3 - Answer the Questions</value>
+  </data>
+  <data name="Tit_NuevaContrasena" xml:space="preserve">
+    <value>Step 3/3 - New Password</value>
+  </data>
+  <data name="App_IntruccionOtp1" xml:space="preserve">
+    <value>Download the Google Authenticator App</value>
+  </data>
+  <data name="App_IntruccionOtp2" xml:space="preserve">
+    <value>Choose one of the steps to continue:</value>
+  </data>
+  <data name="App_IntruccionOtp3" xml:space="preserve">
+    <value>Please enter the code that appears your smartphone. Do not include spaces.</value>
+  </data>
+  <data name="App_IntruccionOtpA1" xml:space="preserve">
+    <value>Scan the following QR code with the Google Authenticator App</value>
+  </data>
+  <data name="App_IntruccionOtpA2" xml:space="preserve">
+    <value>Type the number that appears on your smartphone on step #3.</value>
+  </data>
+  <data name="App_IntruccionOtpB1" xml:space="preserve">
+    <value>Open the Google Authenticator App and type:</value>
+  </data>
+  <data name="App_IntruccionOtpB2" xml:space="preserve">
+    <value>Type the number that appears on your smartphone on step #3.</value>
+  </data>
+  <data name="App_PlaceHolderOTP" xml:space="preserve">
+    <value>Write the 6 numbers</value>
+  </data>
+  <data name="Tit_IngresoOtp" xml:space="preserve">
+    <value>Enter the generated Token code with the Google Authenticator</value>
+  </data>
+  <data name="Tit_InstrucionesOtp" xml:space="preserve">
+    <value>Follow the steps below to activate the Token for the first time:</value>
+  </data>
+</root>

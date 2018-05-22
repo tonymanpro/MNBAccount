@@ -1,0 +1,141 @@
+﻿/* Medias sugeridas */
+/*@media (max-width:480px) {}*/
+/*@media (min-width:481px) AND (max-width:767px) {}*/
+/*@media (min-width:768px) AND (max-width:979px) {}*/
+@media (max-width:979px) {
+
+    body,
+    body > div.bodyprinc {
+        width: 100%;
+        height: 100%;
+    }        
+
+        body > div.bodyprinc {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+            body > div.bodyprinc > div.bodysec,
+            body > div.bodyprinc > div.bodysec > #home_mb_loginform {
+                width: 100%;
+            }
+
+                body > div.bodyprinc > div.bodysec > #home_mb_loginform > h2,
+                #home_mb_loginform > h3 {
+                    width: 90%;
+                    margin: auto;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+
+                body > div.bodyprinc > div.bodysec > #home_mb_loginform > #mb_loginform {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                body > div.bodyprinc > div.bodysec > div.formulario.autocontenedor {
+                    width: 100% !important;
+                }
+
+                    /*Títulos*/
+                    body > div.bodyprinc > div.bodysec > div.formulario.autocontenedor > div.formtitle {
+                        display: inherit;
+                        width: 80%;
+                        margin: auto;
+                        font-size: 2rem;
+                    }
+
+    #autenticaUsuarioForm > div > span.leyenda,
+    #preguntasRegistro > div > span #AliasUsuario,
+    #Correo,
+    #Username,
+    #Password,
+    #mb_forgotpass,
+    #AliasUsuario {
+        display: inherit;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    #autenticaUsuarioForm > input[type="submit"],
+    #submit,
+    #preguntasRegistro > input[type="submit"],
+    #editarContrasenaForm > input[type="submit"] {
+        display: inherit;
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    #autenticaUsuarioForm > input[type="submit"],
+    #preguntasRegistro > input[type="submit"],
+    #editarContrasenaForm > input[type="submit"] {
+        margin-bottom: 25px;
+    }
+
+    #home_mb_loginform > div > div {
+        display: inherit;
+        width: 90%;
+        margin: auto;
+        font-size: 1.4rem;
+    }
+
+        #home_mb_loginform > div > div > span {
+            display: inherit;
+            text-align: center;
+        }
+
+    #preguntasRegistro > div {
+        display: inherit;
+        width: 100%;
+    }
+
+    #IdPaisPreferencia,
+    #IdIdiomaPreferencia,
+    #ListaPreguntas\5b 0\5d \2e IdPregunta,
+    #ListaPreguntas\5b 0\5d \2e Respuesta,
+    #ListaPreguntas\5b 2\5d \2e IdPregunta,
+    #ListaPreguntas\5b 2\5d \2e Respuesta,
+    #ListaPreguntas\5b 3\5d \2e IdPregunta,
+    #ListaPreguntas\5b 3\5d \2e Respuesta,
+    #ListaPreguntas\5b 4\5d \2e IdPregunta,
+    #ListaPreguntas\5b 4\5d \2e Respuesta,
+    #ListaPreguntas\5b 1\5d \2e IdPregunta,
+    #ListaPreguntas\5b 1\5d \2e Respuesta {
+        display: inherit;
+        width: 90% !important;
+        margin: auto;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    #editarContrasenaForm > div > label,
+    #ContrasenaActual,
+    #Contrasena,
+    #ConfirmarContrasena {
+        display: inherit;
+        width: 90% !important;
+        margin: auto;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    #editarContrasenaForm > div:nth-child(6) {
+        display: inherit;
+        width: 90%;
+        margin: auto;
+    }
+
+    #editarContrasenaForm > label {
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+
+    #home_mb_loginform > div > div.ayuda-formulario {
+        font-size: 1rem;
+        margin-bottom: 35px;
+    }
+
+}

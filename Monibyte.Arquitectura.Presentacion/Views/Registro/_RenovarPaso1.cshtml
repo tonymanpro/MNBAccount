@@ -1,0 +1,30 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModRenovarContrasenaPaso1
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse("#autenticaUsuarioForm");
+    });
+</script>
+@using (Ajax.BeginForm("RenovarValidaPaso1", "Registro", null, new AjaxOptions
+{
+    HttpMethod = "Post",
+    UpdateTargetId = "formulario",
+    InsertionMode = InsertionMode.Replace
+}, new { id = "autenticaUsuarioForm" }))
+{
+    <div>
+        <span class="leyenda">@RecEtiquetas.Ayu_Alias</span>
+        @Html.TextBoxFor(u => u.AliasUsuario, new { placeholder = @RecEtiquetas.Mod_AliasUsuario })
+        @Html.ValidationMessageFor(u => u.AliasUsuario)
+    </div>
+    <div>
+        <span class="leyenda">@RecEtiquetas.Ayu_Correo</span>
+        @Html.TextBoxFor(u => u.Correo, new { placeholder = @RecEtiquetas.Mod_Correo })
+        @Html.ValidationMessageFor(u => u.Correo)
+    </div>
+        <!-- clearfix -->
+    <div class="clearLine">
+    </div>
+        <!-- /clearfix -->
+    <input type="submit" value="@RecEtiquetas.App_Siguiente" />
+}
+

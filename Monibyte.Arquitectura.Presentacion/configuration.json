@@ -1,0 +1,36 @@
+﻿{
+    "properties": {
+        "sysid": 1,
+        "security": 0,
+        "homeUrl": "",
+        "logoutUrl": "/home/logout",
+        "transacUrl": "http://localhost:8083/home/validarusuario?ticket={1}"
+    },
+    "culture": {
+        "cookie": "langDefault",
+        "languages": [
+            { "id": 1, "code": "es", "name": "Español", "default": true },
+            { "id": 2, "code": "en", "name": "English" }
+        ]
+    },
+    "restmodules": [
+      {
+        "url": "http://10.80.1.46:58005/api",
+        "name": "ApiCore",
+        "services": [
+          {
+            "name": "Auth",
+            "descriptor": "Auth.svc"
+          },
+          {
+            "name": "General",
+            "descriptor": "General.svc"
+          },
+          {
+            "name": "Membresia",
+            "descriptor": "Membresia.svc"
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,59 @@
+﻿@using Monibyte.Arquitectura.Presentacion.Models
+@using Monibyte.Arquitectura.Web.Nucleo.Helper
+@model IEnumerable<ModPreguntaUsuario>
+@{int index = 0;}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".pregunta").each(function (index) {
+            $(this).val($(this).children("option").eq(index).val());
+            $(this).prepend("<option value='0' selected='selected'>@RecEtiquetas.App_SeleccioneUnaPregunta</option>");
+        });
+    });
+</script>
+@foreach (ModPreguntaUsuario pregunta in Model)
+{
+    IHtmlString campoInicio;
+    if (ViewBag.CollectionPreguntas != null)
+    {
+        var lista = ViewBag.CollectionPreguntas as System.Collections.IEnumerable;
+        var result = Html.ListaCombo(string.Format("ListaPreguntas[{0}].{1}", index, "IdPregunta"), lista, "IdPregunta", "Descripcion",
+        htmlAtributos: new
+        {
+            @class = "pregunta",
+            @id = string.Format("ListaPreguntas[{0}].{1}", index, "IdPregunta")
+        }).ToHtmlString() /*+ "&nbsp;>"*/;
+        campoInicio = Html.Raw(result);
+    }
+    else
+    {
+        @Html.HiddenFor(m => m.ToArray()[index].IdPregunta,
+        new
+        {
+            @id = string.Format("ListaPreguntas[{0}].{1}", index, "IdPregunta"),
+            Name = string.Format("ListaPreguntas[{0}].{1}", index, "IdPregunta")
+        })
+        @Html.HiddenFor(m => m.ToArray()[index].CodUsuario,
+        new
+        {
+            @id = string.Format("ListaPreguntas[{0}].{1}", index, "IdUsuario"),
+            Name = string.Format("ListaPreguntas[{0}].{1}", index, "IdUsuario")
+        })
+        @Html.HiddenFor(m => m.ToArray()[index].Descripcion,
+        new
+        {
+            @id = string.Format("ListaPreguntas[{0}].{1}", index, "Descripcion"),
+            Name = string.Format("ListaPreguntas[{0}].{1}", index, "Descripcion")
+        })
+        campoInicio = Html.Raw("<div>" + Html.DisplayFor(m => m.ToArray()[index].Descripcion) + "</div>");
+    }
+    <div>
+        @campoInicio
+        @Html.TextBoxFor(m => m.ToArray()[index].Respuesta, new
+        {
+            @id = string.Format("ListaPreguntas[{0}].{1}", index, "Respuesta"),
+            Name = string.Format("ListaPreguntas[{0}].{1}", index, "Respuesta")
+        })
+        @*@Html.ValidationMessage(string.Format("ListaPreguntas[{0}].{1}", index, "Respuesta"))*@
+    </div>
+    index++;
+}

@@ -1,0 +1,96 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModDobleFactorAut
+
+@{
+    var _accion = ViewBag.Action as string;
+    var _controlador = _accion == "Index" ? "Registro" : "Auth";
+}
+<link href="~/Content/otp.css" rel="stylesheet" />
+<br />
+<div class="formulario autocontenedor">
+    <div class="formulario">
+        @using (Ajax.BeginForm(_accion, _controlador, new { @area = "" }, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "redireccionarSesion",
+    }, new { id = "CrearClaveOtpForm" }))
+        {
+            <div style="text-align:center;">
+                <div class="tituloOtp">
+                    <h1>@RecEtiquetas.Tit_InstrucionesOtp</h1>
+                </div>
+            </div><br />
+
+            <div id="container">
+                <div id="left">
+                    <ol class="list">
+                        <li><span>@RecEtiquetas.App_IntruccionOtp1</span></li>
+                    </ol>
+                </div>
+                <div id="right">
+                    <img src="@Url.Content("~/Content/imagenes/apple.png")" alt="AppleImage" style="margin-right: 20px;" />
+                    <img src="@Url.Content("~/Content/imagenes/android.png")" alt="AndroidImage" />
+                </div>
+            </div><br />
+
+            <div id="containertwo">
+                <ol start="2" class="list">
+                    <li><span>@RecEtiquetas.App_IntruccionOtp2</span></li>
+                </ol>
+                <div id="lefttwo">
+                    <br />
+                    <ul class="listbullet" id="sublist1">
+                        <li id="la1"><span>@RecEtiquetas.App_IntruccionOtpA1</span></li>
+                    </ul>
+                    <div style="text-align:center;">
+                        <img src="@(Model.QRCodeImageUrl)" />
+                    </div>
+                    <ul class="listbullet" id="sublist2">
+                        <li id="la2"><span>@RecEtiquetas.App_IntruccionOtpA2</span></li>
+                    </ul>
+                </div>
+                <div id="righttwo">
+                    <br />
+                    <ul class="listbullet" id="sublist3">
+                        <li id="lb1"><span>@RecEtiquetas.App_IntruccionOtpB1</span></li>
+                    </ul>
+                    <div style="text-align:center;">
+                        <b>@Html.DisplayFor(m => m.ManualEntrySetupCode)</b>
+                    </div> <br />
+                    <ul class="listbullet" id="sublist4">
+                        <li id="lb2"><span>@RecEtiquetas.App_IntruccionOtpB2</span></li>
+                    </ul>
+                </div>
+            </div><br />
+
+            <div id="containerthree">
+                <ol start="3" class="list">
+                    <li><span>@RecEtiquetas.App_IntruccionOtp3</span></li>
+                </ol>
+                <input type="text" autocomplete="off" name="pin" id="pin" placeholder="@RecEtiquetas.App_PlaceHolderOTP" />
+            </div>
+            <br />
+            <div id="divbtnAceptar">
+                <input id="btnAceptar" type="submit" value="@RecEtiquetas.App_Aceptar" />
+            </div>
+            <br /><br /><br /><br /><br />
+
+
+
+            @*<div style="text-align:center;">
+                    <label>@RecEtiquetas.App_ScaneeIngreseCodigo</label>
+                    <div>
+                        <img src="@(Model.QRCodeImageUrl)" />
+                        @Html.DisplayFor(m => m.ManualEntrySetupCode)
+                    </div>
+                </div>
+                <div class="clearLine"><br /></div>
+                <div>
+                    <label>@RecEtiquetas.App_IngreseCodigoGenerado</label>
+                    <input type="text" name="pin" id="pin" />
+                </div>
+                <input type="submit" value="@RecEtiquetas.App_Aceptar" />*@
+            <div class="clearLine"></div>
+        }
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    </div>
+</div>

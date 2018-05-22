@@ -1,0 +1,49 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModCambioContrasena
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse("#autenticaUsuarioForm");
+        $(".tit_autenticar").text("@Html.Raw(RecEtiquetas.Tit_NuevaContrasena)");
+    });
+    function procesarResultado() {
+        $.jAlert("@RecMensajes.Msj_CambioContrasenaExitoso", "highlight", function () {
+            window.location.href = "/";
+        });
+    }
+</script>
+@using (Ajax.BeginForm("RenovarValidaPaso3", "Registro", null, new AjaxOptions
+{
+    HttpMethod = "Post",
+    OnSuccess = "procesarResultado"
+}, new { id = "autenticaUsuarioForm" }))
+{
+    @Html.HiddenFor(m => m.CodUsuario)
+    <div>
+        <span class="leyenda">
+            @RecEtiquetas.Ayu_Contrasena
+        </span>
+        @Html.PasswordFor(model => model.Contrasena, new { placeholder = @RecEtiquetas.Mod_Contrasena })
+    </div>
+    <div>
+        <span class="leyenda">
+            @RecEtiquetas.Ayu_Confirmar
+        </span>
+        @Html.PasswordFor(model => model.ConfirmarContrasena, new { placeholder = @RecEtiquetas.Mod_Confirmar })
+    </div>
+    <div>
+        <span class="leyenda">
+            @RecEtiquetas.Mod_VigenciaContrasena
+        </span>
+        @Html.RadioButtonFor(model => model.DiasVigencia, 30, new { @checked = "checked" })
+        @RecEtiquetas.App_VigenciaMensual
+        @Html.RadioButtonFor(model => model.DiasVigencia, 90)
+        @RecEtiquetas.App_VigenciaTrimestral
+        @Html.RadioButtonFor(model => model.DiasVigencia, 180)
+        @RecEtiquetas.App_VigenciaSemestral
+    </div>
+        <!-- clearfix -->
+    <div class="clearLine">
+    </div>
+    @Html.Raw(@RecEtiquetas.Ayu_RenuevaContrasena)
+        <!-- /clearfix -->
+    <input type="submit" value="@RecEtiquetas.App_Aceptar" />
+}

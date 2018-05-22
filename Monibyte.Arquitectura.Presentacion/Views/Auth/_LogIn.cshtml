@@ -1,0 +1,25 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModLogin
+@using Monibyte.Arquitectura.Comun.Nucleo.Sesion
+@if (InfoSesion.Info == null)
+{
+    using (Ajax.BeginForm("ValidarUsuario", "Auth", null, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "redireccionarSesion",
+    }, new { @id = "mb_loginform" }))
+    {
+        @Html.TextBoxFor(u => u.Username, new { placeholder = @RecEtiquetas.Mod_AliasUsuario, @autofocus = "autofocus" })
+        @Html.PasswordFor(u => u.Password, new { placeholder = @RecEtiquetas.Mod_Contrasena })
+
+
+        if (!Html.ViewData.ModelState.IsValid)
+        {
+            @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationSummary(true).ToHtmlString()))
+        }
+        <input type="submit" id="submit" class="login" value="@RecEtiquetas.AppLogin" />
+        @Html.ActionLink(@RecEtiquetas.App_Olvido, "Renovar",
+            "Registro", null, new { @id = "mb_forgotpass" })
+
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    }
+}

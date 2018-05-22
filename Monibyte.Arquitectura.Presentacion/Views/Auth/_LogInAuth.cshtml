@@ -1,0 +1,27 @@
+﻿<script type="text/javascript">
+    function redireccionarSesion(resultado) {
+        var _procesarAuth = function (jsonData) {
+            $monibyte.executeAjax({
+                actionUrl: "@Url.Action("ProcesaRespuestaAuth", "Auth", new { @area = "" })",
+                jsonData: jsonData,
+                callback: redireccionarSesion
+            });
+        }
+        if (resultado != null) {
+            if (typeof (resultado) == "string") {
+                $("#EmbeddedDiv").html(resultado);
+                $("#home_mb_loginform").html(resultado);
+            }
+            if (resultado.vencimiento != null && resultado.vencimiento != 0) {
+                var msj = $monibyte.format("@Html.Raw(RecEtiquetas.App_ContrasenaPorVencer)", resultado.vencimiento);
+                $.jConfirm(msj, "highlight", function (conf) {
+                    _procesarAuth({ changePassword: conf });
+                }, { OkText: "@RecEtiquetas.App_Si", CancelText: "@RecEtiquetas.App_No" });
+            } else if (resultado.redireccionar) {
+                $monibyte.blockRedirect(resultado.redireccionar);
+            } else if (resultado.esvalido) {
+                _procesarAuth(resultado);
+            }
+        }
+    }
+</script>

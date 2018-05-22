@@ -1,0 +1,27 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModCambioContrasena
+<h3>@RecEtiquetas.App_CambioDeContrasena</h3>
+<style>
+    #home_mb_loginform {
+        width: 100%;
+    }
+
+    .renew-prompt input[type=button] {
+        width: 49%;
+        margin: 5px 0;
+        padding: 5px 0;
+        display: inline-block;
+    }
+</style>
+<div id="home_mb_loginform">
+    <div class="formulario">
+        @Html.Raw(string.Format(RecEtiquetas.App_ContrasenaPorVencer, ViewBag.Vencimiento))
+
+        <div class="renew-prompt ui-dialog-buttonpane">
+            <input type="button" class="ui-accept-btn" value="@RecEtiquetas.App_Si" onclick="redireccionarSesion({esvalido: true, changePassword: true })" />
+            <input type="button" class="ui-cancel-btn" value="@RecEtiquetas.App_No" onclick="redireccionarSesion({esvalido: true, changePassword: false })" />
+        </div>
+        <div class="clearLine">
+        </div>
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    </div>
+</div>

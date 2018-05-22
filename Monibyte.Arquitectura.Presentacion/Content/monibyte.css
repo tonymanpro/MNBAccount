@@ -1,0 +1,306 @@
+﻿/*@charset "UTF-8";*/
+/*********************LAYOUT*********************/
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito-Regular'), url(monibyte.woff) format('woff');
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 3.125rem;
+    color: #18bc9c;
+}
+
+a {
+    transition: all ease 0.25s;
+    -webkit-transition: all ease 0.25s;
+}
+
+.topnav {
+    font-size: 14px;
+}
+
+input, select {
+    font-family: 'Nunito', sans-serif;
+}
+
+    input[class*='mb-numeric'] {
+        text-align: right;
+    }
+
+option {
+    white-space: pre;
+}
+
+option, selection {
+    text-shadow: none;
+    background-color: transparent;
+}
+
+img {
+    border: none;
+}
+
+ul {
+    margin-top: 5px;
+}
+
+.ajaxError {
+    color: Maroon;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+
+textarea {
+    min-height: 50px;
+    min-width: 250px;
+}
+
+textarea, input {
+    outline: none;
+}
+
+.bodyprinc {
+    height: 91%;
+    padding-top: 52px;
+    text-align: center;
+    border-top: 3px solid #f59531;
+}
+
+    .bodyprinc .bodysec {
+        height: 100%;
+        text-align: left;
+        display: inline-block;
+        background-color: #FFFFFF;
+    }
+
+footer {
+    width: 100%;
+    color: #616161;
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    font-size: 13px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #f59531;
+}
+
+    footer .foot-left {
+        width: 50%;
+        float: left;
+    }
+
+    footer .foot-right {
+        width: 50%;
+        float: right;
+        text-align: center;
+    }
+/* @group menu */
+
+.navbar-nav span {
+    line-height: inherit !important;
+}
+
+.navbar-brand {
+    padding: 15px 15px;
+}
+
+    .navbar-brand span {
+        color: #DC8726;
+        font-size: 1em;
+        vertical-align: middle;
+        text-transform: uppercase;
+        line-height: 20px !important;
+        font-family: 'Archivo Black', sans-serif;
+    }
+
+    .navbar-brand > img {
+        /*max-width: 50px;*/
+        display: inline-block;
+    }
+
+.navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #ffffff !important;
+}
+
+    .navbar-nav > li > a:hover {
+        color: #18bc9c !important;
+    }
+
+.login-btn {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-top: 12px;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+}
+/* mb_loginform */
+#mb_loginform {
+    width: 375px;
+    margin: auto;
+    text-align: center;
+}
+
+    #mb_loginform input[type="submit"], #validaOTPForm input[type="submit"],
+    #CrearClaveOtpForm input[type="submit"] {
+        background-image: -webkit-linear-gradient(top,#30C5EF,#1D9FAF);
+        background: -moz-linear-gradient(top,#30C5EF,#1D9FAF); /*FIREFOX*/
+        background: -webkit-linear-gradient(top,#30C5EF,#1D9FAF); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(top,#30C5EF,#1D9FAF); /* For Opera 11.1 to 12.0 */
+        background: linear-gradient(top,#30C5EF,#1D9FAF); /* Standard syntax */
+        background: -ms-linear-gradient(top,#30C5EF,#1D9FAF); /* IE10+ */
+    }
+
+#mb_forgotpass {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+    #mb_forgotpass:hover {
+        text-decoration: underline;
+    }
+
+#home_mb_loginform {
+    width: 375px;
+    margin: auto;
+}
+/*********************LAYOUT*********************/
+input, select {
+    outline: none;
+    width: 363px;
+    height: 48px;
+    font-size: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 0 25px 0;
+    border: 1px solid #ccc;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+    input:focus {
+        background-color: #fff;
+        border-color: #e8c291;
+        outline: none;
+        box-shadow: 0 0 0 1px #e8c291 inset;
+        -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+        -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    }
+
+    input:disabled {
+        opacity: .9;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        cursor: default;
+        -webkit-user-select: none;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+
+        input[type="radio"]:focus {
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+    .submit,
+    input[type="button"],
+    input[type="submit"] {
+        color: #FFF;
+        width: 375px;
+        height: 50px;
+        display: block;
+        font-size: 17px;
+        text-align: center;
+        text-transform: none;
+        cursor: pointer;
+        background-image: -webkit-linear-gradient(top,#F1BC7C,#F89920);
+        background: -moz-linear-gradient(top,#F1BC7C,#F89920); /*FIREFOX*/
+        background: -webkit-linear-gradient(top,#F1BC7C,#F89920); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(top,#F1BC7C,#F89920); /* For Opera 11.1 to 12.0 */
+        background: linear-gradient(top,#F1BC7C,#F89920); /* Standard syntax */
+        background: -ms-linear-gradient(top,#F1BC7C,#F89920); /* IE10+ */
+    }
+
+        input[type="button"]:disabled,
+        input[type="submit"]:disabled {
+            background: #ccc;
+            color: darkgray;
+        }
+
+        input[type="button"].sub-button,
+        input[type="submit"].sub-button {
+            font-size: 12px;
+            text-transform: none;
+        }
+
+select {
+    width: 375px !important;
+}
+
+hr {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+    border-top: 1px gray solid;
+}
+
+em {
+    font: Small Fonts;
+}
+
+.autocontenedor {
+    width: 100%;
+    float: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 1366px) {
+    input {
+        height: 39px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .autocontenedor {
+        width: 90% !important;
+    }
+}

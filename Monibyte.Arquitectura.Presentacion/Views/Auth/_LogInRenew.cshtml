@@ -1,0 +1,79 @@
+﻿<div id="EmbeddedDiv">
+    @model Monibyte.Arquitectura.Presentacion.Models.ModCambioContrasena
+    @{
+        var isEmbedded = ViewBag.IsEmbedded as bool?;
+    }
+    @if (ViewBag.Vencimiento == null && isEmbedded == false)
+    { 
+        <h3>@RecEtiquetas.App_CambioDeContrasena</h3>
+    }
+    else
+    {
+        <h3>@RecEtiquetas.App_ContrasenaVencida</h3>
+    }
+    <style>
+        #home_mb_loginform {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#editarContrasenaForm').confirmSubmit({
+                Message: "@RecMensajes.Msj_GuardarCambios",
+                OkText: "@RecEtiquetas.App_Aceptar",
+                CancelText: "@RecEtiquetas.App_Cancelar",
+                Condition: function () {
+                    return true;
+                }
+            });
+            $.validator.unobtrusive.parse("#editarContrasenaForm");
+        });
+        function reAuthSession(resultado) {
+            $.jAlert("@RecMensajes.Msj_CambioContrasenaExitoso", "highlight", function () {
+                window.redireccionarSesion(resultado);
+            });
+        }
+    </script>
+    <div class="formulario">
+        @using (Ajax.BeginForm("ActualizaSeguridad", "Auth", new { @area = "" }, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "reAuthSession"
+    }, new { id = "editarContrasenaForm" }))
+        {
+            @Html.HiddenFor(m => m.CodUsuario)
+            <div>
+                @Html.LabelFor(model => model.ContrasenaActual)
+                @Html.PasswordFor(model => model.ContrasenaActual, new { placeholder = @RecEtiquetas.Mod_ContrasenaActual })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Contrasena)
+                @Html.PasswordFor(model => model.Contrasena, new { placeholder = @RecEtiquetas.Mod_Contrasena })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.ConfirmarContrasena)
+                @Html.PasswordFor(model => model.ConfirmarContrasena, new { placeholder = @RecEtiquetas.Mod_Confirmar })
+            </div>
+            @Html.LabelFor(model => model.DiasVigencia)
+            <div>
+                <div style="display: inline-block;">
+                    @Html.RadioButtonFor(model => model.DiasVigencia, 30, new { @checked = "checked" })
+                    @RecEtiquetas.App_VigenciaMensual
+                </div>
+                <div style="display: inline-block;">
+                    @Html.RadioButtonFor(model => model.DiasVigencia, 90)
+                    @RecEtiquetas.App_VigenciaTrimestral
+                </div>
+                <div style="display: inline-block;">
+                    @Html.RadioButtonFor(model => model.DiasVigencia, 180)
+                    @RecEtiquetas.App_VigenciaSemestral
+                </div>
+            </div>
+            <input type="submit" value="@RecEtiquetas.App_Aceptar" />
+            <div class="clearLine">
+            </div>
+        }
+        @Html.Raw(@RecEtiquetas.Ayu_CambioContrasena)
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    </div>
+</div>

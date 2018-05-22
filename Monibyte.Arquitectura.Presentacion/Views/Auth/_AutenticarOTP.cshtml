@@ -1,0 +1,54 @@
+﻿<br />
+<style>
+    #home_mb_loginform {
+        width: 100% !important;
+    }
+    #pin {
+        height: 26px !important;
+        width: 210px;
+    }
+    #btnAceptar {
+        margin-bottom: 0px;
+        margin-right: 0px;
+        background: #F69700 !important;
+        width: 130px;
+        border-radius: 6px;
+        height: 28px !important;
+    }
+    .conntentdiv {
+        clear: both;
+        display: inline-block;
+    }
+</style>
+<link href="~/Content/monibyte.css" rel="stylesheet" />
+<div class="formulario autocontenedor">
+    <div class="formulario">
+        @using (Ajax.BeginForm("validaOTP", "Auth", new { @area = "" }, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "redireccionarSesion",
+    }, new { id = "validaOTPForm" }))
+        {
+            <br /><br /><br /><br /><br /><br /><br />
+            <div style="text-align:center;">
+                <label>@RecEtiquetas.Tit_IngresoOtp</label>
+            </div><br />
+            <div style="text-align:center;">
+                <div class="conntentdiv">
+                    <input type="text" autocomplete="off" name="pin" id="pin" autofocus="autofocus" />
+                </div>
+                <div class="conntentdiv">
+                    <input id="btnAceptar" type="submit" value="@RecEtiquetas.App_Aceptar" />
+                </div>              
+            </div>
+            
+            @*<div style="text-align:center;">
+                <label>@RecEtiquetas.App_IngreseOTP</label>
+                <input type="text" name="pin" id="pin" autofocus="autofocus" />
+            </div>
+            <input type="submit" value="@RecEtiquetas.App_Aceptar" />*@
+            <div class="clearLine"></div>
+        }
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    </div>
+</div>

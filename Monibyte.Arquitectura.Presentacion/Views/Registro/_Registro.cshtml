@@ -1,0 +1,75 @@
+﻿@model Monibyte.Arquitectura.Presentacion.Models.ModUsuarioRegistro
+@using Monibyte.Arquitectura.Web.Nucleo.Helper
+@{
+
+    var listaPaises = ViewBag.ListaPaises as System.Collections.IEnumerable;
+    var listaIdiomas = ViewBag.ListaIdiomas as System.Collections.IEnumerable;
+}
+@{
+    if (!Request.IsAjaxRequest())
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+<style>
+    .field-validation-error {
+        display: inherit;
+    }
+
+    #home_mb_loginform {
+        top: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse("#preguntasRegistro");
+    });
+</script>
+<div class="formulario autocontenedor">
+    <div class="formtitle">
+        <span>@RecEtiquetas.Tit_InfoPersonal</span>
+    </div>
+    @using (Ajax.BeginForm("Registrar", "Registro", null, new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "redireccionarSesion"
+    }, new { id = "preguntasRegistro" }))
+    {
+        <div>
+            <span class="leyenda">@RecEtiquetas.Ayu_Alias</span>
+            @Html.TextBoxFor(model => model.AliasUsuario,
+            new
+            {
+                placeholder = RecEtiquetas.App_UsuarioAliasDePreferencia
+            })
+        </div>
+        <div>
+            <span class="leyenda">@RecEtiquetas.Ayu_CorreoRegistrar</span>
+            @Html.TextBoxFor(model => model.Correo, new { placeholder = RecEtiquetas.Mod_Correo })
+        </div>
+        <div>
+            <span class="leyenda">@RecEtiquetas.Ayu_Pais</span>
+            @Html.ListaComboFor(m => m.IdPaisPreferencia, listaPaises, "IdPais",
+                "Descripcion", "", string.Empty, RecEtiquetas.App_SeleccionePais)
+        </div>
+        <div>
+            <span class="leyenda">@RecEtiquetas.Ayu_Idioma</span>
+            @Html.ListaComboFor(m => m.IdIdiomaPreferencia, listaIdiomas, "IdIdioma",
+                    "Idioma", "", string.Empty, RecEtiquetas.App_SeleccionIdioma)
+        </div>
+        <div class="clearLine"></div>
+        <div>
+            <span class="leyenda">@RecEtiquetas.App_SeleccionPreguntas</span>
+            @Html.Partial("_ListaPreguntas", Model.ListaPreguntas)
+        </div>
+        <!-- clearfix -->
+        <div class="clearLine"></div>
+        <!-- /clearfix -->
+        <input type="submit" value="@RecEtiquetas.App_Aceptar" />
+        @Html.Partial("~/Views/Auth/_LogInAuth.cshtml")
+    }
+</div>

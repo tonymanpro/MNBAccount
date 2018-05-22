@@ -1,0 +1,496 @@
+﻿.ui-dialog {
+    padding: 0; /*position: fixed;*/
+    overflow: hidden;
+}
+
+.k-overlay {
+    opacity: 0 !important;
+}
+
+.blockUI.blockOverlay {
+    opacity: 0 !important;
+}
+
+.blockUI.blockMsg.blockPage {
+    border: 0 !important;
+    width: auto !important;
+    background-color: transparent !important;
+}
+
+.hided-button {
+    display: none;
+}
+
+/* dialogos final */
+.k-widget.k-window {
+    color: #000;
+    border-radius: 0;
+    border: solid 1px #000;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #fffffc 18%, #e5e5e5 81%, #d3d3d3 92%, #c9c9c9 98%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(18%,#fffffc), color-stop(81%,#e5e5e5), color-stop(92%,#d3d3d3), color-stop(98%,#c9c9c9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#fffffc 18%,#e5e5e5 81%,#d3d3d3 92%,#c9c9c9 98%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#fffffc 18%,#e5e5e5 81%,#d3d3d3 92%,#c9c9c9 98%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#fffffc 18%,#e5e5e5 81%,#d3d3d3 92%,#c9c9c9 98%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#fffffc 18%,#e5e5e5 81%,#d3d3d3 92%,#c9c9c9 98%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+}
+
+    .k-widget.k-window .k-content {
+        /*font-size: 0.75em;*/
+        background-color: transparent;
+    }
+
+        .k-widget.k-window .k-content input[type="text"]:not(.k-input) {
+            color: #667;
+            border: solid 1px #ccc;
+        }
+
+        .k-widget.k-window .k-content input[type="text"].input-validation-error {
+            border: 1px solid red;
+        }
+
+        .k-widget.k-window .k-content .contenedorComponente {
+            font-size: 11px;
+        }
+
+.k-window-titlebar.k-header {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 0;
+    text-align: center;
+    background: #1B8C9A;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Nunito',sans-serif;
+}
+
+    .k-window-titlebar.k-header span:hover {
+        cursor: pointer;
+    }
+
+div.k-window-content {
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.k-widget input[class*='mb-numeric'] {
+    text-align: right;
+}
+
+/*.k-widget.k-window .k-window-actions {
+    display: none;
+}*/
+
+.jpopup table {
+    width: 100%;
+    min-width: 250px;
+    min-height: 40px;
+    font-size: 14px;
+}
+
+    .jpopup table th {
+        width: 30px;
+    }
+
+.jpopup .ui-state-error {
+    color: #cd0a0a;
+}
+
+.jpopup .ui-state-highlight {
+    color: #0000CC;
+}
+
+.jpopup .ui-state-normal {
+    color: #2e2e2e;
+}
+
+.no-title .k-window-titlebar.k-header {
+    padding: 0.2em 0;
+    position: relative;
+}
+
+.k-widget.k-window > div.k-window-content .ui-dialog-buttonpane {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.k-widget.k-window .ui-dialog-buttonpane {
+    margin-top: 0;
+    margin-top: 15px;
+    text-align: right;
+    padding: 7px 0 0 0;
+    border-width: 2px 0 0 0;
+    border-top: solid 2px #F59531;
+}
+
+.ui-dialog-buttonpane .ui-accept-btn {
+    margin: 5px 5px;
+    border: solid 1px #4f787e;
+    background-color: #4f787e;
+}
+
+.ui-dialog-buttonpane .ui-cancel-btn {
+    margin: 5px 15px 5px 5px;
+    border: solid 1px #f59531;
+    background-color: #f59531;
+}
+
+.ui-dialog-buttonpane .ui-accept-btn,
+.ui-dialog-buttonpane .ui-cancel-btn {
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 5px 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 7px 0 gray;
+    -moz-box-shadow: 1px 1px 7px 0 gray;
+    -webkit-box-shadow: 1px 1px 7px 0 gray;
+}
+
+    .ui-dialog-buttonpane .ui-accept-btn:hover,
+    .ui-dialog-buttonpane .ui-accept-btn:focus {
+        color: #FFFFFF;
+        border-color: #ffffff;
+        background-color: #4f787e;
+    }
+
+    .ui-dialog-buttonpane .ui-cancel-btn:hover,
+    .ui-dialog-buttonpane .ui-cancel-btn:focus {
+        color: #FFFFFF;
+        border-color: #ffffff;
+        background-color: #f59531;
+    }
+/* dialogos final */
+
+/* Grid special methods */
+.mb-master-detail tbody tr:hover {
+    cursor: pointer;
+}
+
+.k-header > .k-header-column-menu {
+    padding: .65em .2em .4em;
+}
+
+.k-icon.k-filter {
+    background-position: -48px -80px;
+}
+/* Grid special methods */
+.containerRangoFecha {
+    display: inline;
+    margin: 0 5px 0 0;
+}
+
+    .containerRangoFecha span.k-datepicker {
+        width: 125px;
+    }
+
+.k-grid-content {
+    min-height: 200px;
+}
+
+.k-grid td {
+    padding: .3em .5em;
+}
+
+.k-grid tbody .k-button {
+    background-image: url('imagenes/iconos/garbage-icon(16).png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    min-width: 12px;
+    width: 18px;
+    border: none;
+}
+
+.k-grid .k-delete {
+    background-position: 0 0;
+    background-image: none;
+}
+
+.k-dropdown-wrap .k-input, .k-picker-wrap .k-input,
+.k-numeric-wrap .k-input, .k-numeric-wrap.k-expand-padding .k-input,
+.k-autocomplete.k-state-default, .k-numeric-wrap.k-state-default,
+.k-picker-wrap.k-state-default, .k-dropdown-wrap.k-state-default,
+.k-autocomplete.k-state-border-up .k-input, .k-numeric-wrap.k-state-border-up .k-input,
+.k-picker-wrap.k-state-border-up .k-input, .k-dropdown-wrap.k-state-border-up .k-input,
+.k-autocomplete.k-state-border-down .k-input, .k-numeric-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-input, .k-dropdown-wrap.k-state-border-down .k-input,
+.k-autocomplete.k-state-hover, .k-numeric-wrap.k-state-hover, .k-picker-wrap.k-state-hover, .k-dropdown-wrap.k-state-hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #c5c5c5;
+}
+
+.k-datepicker {
+    /*height: 25px;*/
+}
+
+span.k-tooltip {
+    position: absolute;
+}
+
+.toolBar {
+    text-decoration: initial;
+    color: gray;
+}
+
+.k-tabstrip {
+    background: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+    .k-tabstrip .k-content {
+        margin: 0; /*padding: 0;*/
+        border: none;
+    }
+
+    .k-tabstrip .k-tabstrip-items {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding: 5px 0 0 3px;
+        border-bottom: solid 1px #c5c5c5;
+    }
+
+        .k-tabstrip .k-tabstrip-items .k-state-active {
+            border-color: /*#c5c5c5*/ #f7971d;
+        }
+
+    .k-tabstrip .k-content.k-state-active {
+        padding-top: 1%;
+    }
+
+    .k-tabstrip .k-state-active, .k-state-active, .k-state-active:hover {
+        border-color: #c5c5c5;
+    }
+
+.k-dropdown .k-input {
+    height: 20px;
+}
+
+.k-popup .k-list .k-item {
+    font-size: 12px;
+}
+
+.k-loading-mask {
+    display: none;
+}
+
+.k-grid-header .k-header > .k-link {
+    display: inline;
+}
+
+.k-grid-header .k-header .k-link:hover {
+    background: #dbdbdb; /* Old browsers */
+    background: -moz-linear-gradient(top, #dbdbdb 1%, #bababa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#dbdbdb), color-stop(100%,#bababa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #dbdbdb 1%,#bababa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dbdbdb 1%,#bababa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #dbdbdb 1%,#bababa 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #dbdbdb 1%,#bababa 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#bababa',GradientType=0 ); /* IE6-9 */
+    cursor: move;
+}
+
+.k-grid-footer td {
+    border: none;
+}
+
+.k-excel-link {
+    color: gray;
+    min-width: 70px;
+    padding-left: 22px;
+    text-decoration: none;
+    background-image: url('imagenes/iconos/excel-icon(20).png');
+    background-repeat: no-repeat;
+    background-position: 3px;
+}
+
+.k-txt-link {
+    color: gray;
+    min-width: 70px;
+    padding-left: 22px;
+    text-decoration: none;
+    background-image: url('imagenes/iconos/txt-icon(20).png');
+    background-repeat: no-repeat;
+    background-position: 3px;
+}
+
+.k-pdf-link {
+    color: gray;
+    min-width: 70px;
+    padding-left: 22px;
+    text-decoration: none;
+    background-image: url('imagenes/iconos/pdf-icon(20).png');
+    background-repeat: no-repeat;
+    background-position: 3px;
+}
+
+.k-list-link {
+    top: -32px;
+    left: 85px;
+    float: right;
+    padding-left: 22px;
+    text-decoration: none;
+    position: absolute;
+    background-image: url('imagenes/iconos/list(16px).png');
+    background-repeat: no-repeat;
+    background-position: 3px;
+}
+
+.k-grid-icons {
+    color: gray;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+    .k-grid-icons:hover {
+        opacity: 0.8;
+    }
+
+    .k-grid-icons span {
+        margin-left: 3px;
+        display: inline-block;
+        vertical-align: super;
+    }
+
+    .k-grid-icons.empty-icon {
+        width: 16px;
+        display: inline-block;
+    }
+
+    .k-grid-icons.bold-text-icon {
+        color: black;
+        font-weight: bold;
+    }
+
+    .k-grid-icons.dinamic-icon {
+        display: inline-block;
+    }
+
+.k-grouping-header {
+    font-weight: bold;
+    padding-left: 10px;
+    color: #F99A00;
+}
+
+
+.k-notification.k-notification-success {
+    width: 325px;
+    border: none;
+    background-color: #000 !important;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    -webkit-box-shadow: 0 0 5px #000;
+    background: url('imagenes/iconos/app-clean-icon.png') #000 no-repeat 20px 3px;
+}
+
+    .k-notification.k-notification-success .k-notification-wrap {
+        margin: 0;
+        padding: 0;
+    }
+
+    .k-notification.k-notification-success h2 {
+        margin: 0;
+        font-size: 17px;
+        display: inline-block;
+        color: rgb(183, 206, 224);
+        padding: 5px 5px 5px 55px;
+    }
+
+    .k-notification.k-notification-success .k-icon.k-i-note {
+        display: none;
+    }
+
+/*Estilos Kendo Sortable*/
+.k-sortable {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 4px;
+    background-color: #f3f5f7;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+    .k-sortable .k-sortable-title {
+        padding: 6px 8px;
+        background-color: #fff;
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .k-sortable .k-sortable-items {
+        margin: 0;
+        padding: 0;
+    }
+
+        .k-sortable .k-sortable-items li {
+            margin: 0;
+            color: #666;
+            cursor: pointer;
+            padding: 6px 8px;
+            list-style-type: none;
+        }
+
+            .k-sortable .k-sortable-items li:hover {
+                background-color: #dceffd;
+            }
+
+li.hint {
+    color: #fff;
+    display: block;
+    padding: 6px 8px;
+    background-color: #52aef7;
+}
+
+    li.hint:after {
+        width: 0;
+        height: 0;
+        top: 8px;
+        left: 216px;
+        content: "";
+        display: block;
+        position: absolute;
+        border-left: 6px solid #52aef7;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+    }
+
+    li.hint:last-child {
+        border-radius: 4px;
+    }
+
+    li.hint span {
+        color: #fff;
+    }
+
+.k-sortable .k-sortable-items li.placeholder {
+    color: #52aef7;
+    text-align: right;
+    background-color: #dceffd;
+}
+
+/*PerfilEmpresa Kendo().Upload*/
+#editarPerfilEmpresaForm .k-upload {
+    background-color: transparent;
+    border: none;
+    background-image: none;
+}
+
+#editarPerfilEmpresaForm .k-upload-files {
+    display: none;
+}
+
+#editarPerfilEmpresaForm .k-upload-status {
+    display: none;
+}
+/*PerfilEmpresa Kendo().Upload*/
+

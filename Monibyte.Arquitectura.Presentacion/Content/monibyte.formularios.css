@@ -1,0 +1,93 @@
+﻿.clear {
+    clear: both;
+}
+
+.clearLine {
+    clear: both;
+}
+
+.formulario {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+    .formulario form, div.form {
+        width: 100%;
+    }
+
+        .formulario form .leyenda, div.form .leyenda {
+            color: #667;
+            display: block;
+            vertical-align: top;
+        }
+
+    .formulario label {
+        display: inherit;
+        line-height: 14px;
+    }
+
+    .formulario .formtitle {
+        color: #F99A00;
+        text-align: left;
+        margin-top: 0;
+        font-size: 3.5rem;
+        margin-bottom: 0px;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px #222;
+    }
+
+.field-validation-error {
+    color: #ff0000;
+    font-size: 0.75em;
+    margin-left: 25px;
+    margin-top: 0;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+span:not(.field-validation-error),
+.form span:not(.field-validation-error) {
+    line-height: 25px;
+}
+
+.input-validation-error,
+input[type="password"]:not(.k-input).input-validation-error,
+input[type="text"]:not(.k-input).input-validation-error,
+select:not(.k-input).input-validation-error,
+textarea.input-validation-error,
+textarea:not(.k-input).input-validation-error,
+.k-picker-wrap .k-input.input-validation-error,
+.ui-widget input.input-validation-error {
+    border: 1px solid red;
+    background-color: #FFFAFA;
+}
+
+    .input-validation-error:focus,
+    input[type="password"]:not(.k-input).input-validation-error:focus,
+    input[type="text"]:not(.k-input).input-validation-error:focus,
+    select:not(.k-input).input-validation-error:focus,
+    textarea.input-validation-error:focus,
+    textarea:not(.k-input).input-validation-error:focus,
+    .k-picker-wrap .k-input.input-validation-error:focus,
+    .ui-widget input.input-validation-error:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px #719ECE;
+    }
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.validation-summary-errors ul {
+    margin-left: 0;
+    text-align: left;
+    list-style-type: none;
+}
