@@ -21,6 +21,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,13 +54,17 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Monibyte.Arquitectura.Adaptador.Nucleo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Monibyte.Arquitectura.Adaptador.Nucleo.dll</HintPath>
+    </Reference>
     <Reference Include="Monibyte.Arquitectura.Comun.Nucleo, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\monibyte.libraries\core\Monibyte.Arquitectura.Comun.Nucleo.dll</HintPath>
+      <HintPath>dlls\Monibyte.Arquitectura.Comun.Nucleo.dll</HintPath>
     </Reference>
     <Reference Include="Monibyte.Arquitectura.Web.Nucleo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\monibyte.libraries\core\Monibyte.Arquitectura.Web.Nucleo.dll</HintPath>
+      <HintPath>dlls\Monibyte.Arquitectura.Web.Nucleo.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -267,6 +273,9 @@
     <Content Include="Content\monibyte.externo.css" />
     <Content Include="Content\monibyte.formularios.css" />
     <Content Include="Content\otp.css" />
+    <Content Include="dlls\Monibyte.Arquitectura.Adaptador.Nucleo.dll" />
+    <Content Include="dlls\Monibyte.Arquitectura.Comun.Nucleo.dll" />
+    <Content Include="dlls\Monibyte.Arquitectura.Web.Nucleo.dll" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
